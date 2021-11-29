@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title data-th-text="${titulo}"></title>
+  <link data-th-href="@{/css/style.css}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<h1 class="main" data-th-text="${titulo}"></h1>
+<span data-th-text="${user.name}"></span>
+
+<br/>
+<span data-th-if="${user.email}" data-th-text="${user.email}"></span>
+<span data-th-if="${user.email == null}">User without email</span>
+
+<br/>
+<a data-th-href="@{/params/string(text='Bego')}">Params Bego</a>
+<a data-th-href="@{/params/mix-params(text='Mario', number='36')}">Params Mario 36</a>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form data-th-action="@{/form}" data-th-object="${user}" method="post">
+  <div>
+    <label for="name">Name</label>
+    <div>
+      <input data-th-field="*{name}" id="name" type="text">
+    </div>
+    <div data-th-errors="*{name}" data-th-if="${#fields.hasErrors('name')}"></div>
+  </div>
+  <div>
+    <label for="lastName">Last Name</label>
+    <div>
+      <input data-th-field="*{lastName}" id="lastName" type="text">
+    </div>
+    <div data-th-errors="*{lastName}" data-th-if="${#fields.hasErrors('lastName')}"></div>
+  </div>
+  <div>
+    <label for="username">Username</label>
+    <div>
+      <input data-th-field="*{username}" id="username" type="text">
+    </div>
+    <div data-th-errors="*{username}" data-th-if="${#fields.hasErrors('username')}"></div>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <div>
+      <input data-th-field="*{password}" id="password" type="password"/>
+    </div>
+    <div data-th-errors="*{password}" data-th-if="${#fields.hasErrors('password')}"></div>
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <div>
+      <input data-th-field="*{email}" id="email" type="text"/>
+    </div>
+    <div data-th-errors="*{email}" data-th-if="${#fields.hasErrors('email')}"></div>
+  </div>
+
+  <div>
+    <div>
+      <input type="submit" value="Send"/>
+    </div>
+  </div>
+
+</form>
+</body>
+</html>
